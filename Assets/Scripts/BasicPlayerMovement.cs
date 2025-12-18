@@ -10,11 +10,13 @@ public class BasicPlayerMovement : MonoBehaviour
     public Transform[] walls;
     public AudioSource ambiance;
     public AudioSource badTime; //click off Play on Awake in inspector then you can assign it 
-    public AudioSource portal;
+    public AudioSource portal2;
     public AudioSource golden;
     public AudioSource sleepyTime;
-    public AudioSource sparkles;
+    public AudioSource blueorb;
+    //public AudioSource sparkles;
     Vector3 startPos;
+    bool portalaudio;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +25,7 @@ public class BasicPlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
+    //sup bro
     void Update()
     {
         //introduce a boolean variable to check if the player can move
@@ -78,25 +81,33 @@ public class BasicPlayerMovement : MonoBehaviour
         if (transform.position == new Vector3(1f, 1f, 11f))
         {
             print("you were cursed");
-            badTime.Play();
+            //badTime.Play();
+            if (!badTime.isPlaying)
+                badTime.Play();
             (transform.position) = startPos;
         }
         if (transform.position == new Vector3(12f, 1f, 11f))
         {
             print("you are rewarded");
-            golden.Play();
+            //golden.Play();
+            if (!golden.isPlaying)
+                golden.Play();
             (transform.position) = new Vector3 (16f,1f,1f);
         }
         if (transform.position == new Vector3(17f, 1f, 2f))
         {
             print("the fairies laugh in the distance");
-            sparkles.Play();
+            //sparkles.Play();
+            if (!blueorb.isPlaying)
+                blueorb.Play();
             (transform.position) = new Vector3(9f, 1f, 13f);
         }
         if (transform.position == new Vector3(5f, 1f, 3f))
         {
             print("you fell asleep");
-            sleepyTime.Play();
+            //sleepyTime.Play();
+            if (!sleepyTime.isPlaying)
+                sleepyTime.Play();
             (transform.position) = startPos;
         }
         if (transform.position == new Vector3(8f, 1f, 12f))
@@ -116,8 +127,11 @@ public class BasicPlayerMovement : MonoBehaviour
         }
         if (transform.position == new Vector3(9f,1f,16f))
         {
-            portal.Play();
+            //portal.Play();
             print("the fairies welcome you... or do they?");
+            if (!portal2.isPlaying && !portalaudio)
+                portal2.Play();
+                portalaudio = true;
         }
     }
 }

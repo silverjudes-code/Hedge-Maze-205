@@ -2578,7 +2578,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 9c39eaff4b0719c4ba83bbf81e9d121d, type: 3}
+  m_Resource: {fileID: 8300000, guid: 78c18754db1b8854ba0ba1fda472e481, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -22478,7 +22478,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 920174a8bab2abd43b473b61cc829949, type: 3}
+  m_Resource: {fileID: 8300000, guid: a38bcf32e2fc7fe4e8c71695e8ae6b73, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -26629,10 +26629,10 @@ MonoBehaviour:
   - {fileID: 1113445632}
   ambiance: {fileID: 1333774892}
   badTime: {fileID: 1659847906}
-  portal: {fileID: 183609980}
+  portal2: {fileID: 183609980}
   golden: {fileID: 1552554623}
   sleepyTime: {fileID: 1054602549}
-  sparkles: {fileID: 1124484806}
+  blueorb: {fileID: 1124484806}
 --- !u!136 &1333774888
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -26743,7 +26743,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
